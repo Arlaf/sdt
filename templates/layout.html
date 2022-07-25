@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>???</title>
+    {% endif %}
+
+    {% block script_head %}{% endblock script_head %}
+
+    {% block style %}{% endblock style %}
+</head>
+
+<body>
+
+    {% block script_body %}{% endblock script_body %}
+
+    <div>
+        <a href="/home">Home</a><br>
+    </div>
+
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>
